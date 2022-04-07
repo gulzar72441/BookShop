@@ -64,7 +64,7 @@ namespace BookShopByGulzar
 
             services.AddControllersWithViews();
 #if DEBUG
-            //services.AddRazorPages().AddRazorRuntimeCompilation();
+            services.AddRazorPages().AddRazorRuntimeCompilation();
 
             // Uncomment this code to disable client side validations.
             //    .AddViewOptions(option =>
