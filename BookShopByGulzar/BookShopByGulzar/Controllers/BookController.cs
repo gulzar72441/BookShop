@@ -1,5 +1,6 @@
 ﻿using BookShopByGulzar.Models;
 using BookShopByGulzar.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -44,7 +45,7 @@ namespace BookShopByGulzar.Controllers
             return _bookRepository.SearchBook(bookName, authorName);
         }
 
-        //[Authorize]
+        [Authorize]
         public async Task<ViewResult> AddNewBook(bool isSuccess = false, int bookId = 0)
         {
             var model = new BookModel();

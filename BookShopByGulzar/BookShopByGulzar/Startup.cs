@@ -103,6 +103,7 @@ namespace BookShopByGulzar
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
